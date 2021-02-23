@@ -1,0 +1,9 @@
+# generated files #
+######################
+.DS_Store
+.Rhistory
+.Rproj.user/
+
+# background scripts #
+########################
+00-*
