@@ -40,7 +40,6 @@ gtot <- ggplot(richness, aes(Protection, total)) +
   labs(y = "Overall species richness", x = "") +
   theme(plot.title = element_text(hjust = 0.5), legend.position = "none") + # centralize title and hide legend
   coord_cartesian(ylim=c(0,50))
-#ggsave(plot = gtot, "figures/total_richness_coastal_nf_overall_violin_jitter_purple.pdf", height = 4, width = 4)
 
 # conditional predicted richness from model
 cond_total   <- cplot(mod_total   , "Protection", draw = F)
@@ -107,7 +106,6 @@ species_scores_diff75$col <- factor(species_scores_diff75$col, levels = c("crypt
 sumdbrda <- summary(part.dbrda)
 CAP1 <- round(sumdbrda$cont$importance["Proportion Explained", "CAP1"]*100, 1)
 CAP2 <- round(sumdbrda$cont$importance["Proportion Explained", "CAP2"]*100, 1)
-R2 <- RsquareAdj(part.dbrda)$adj.r.squared %>% round(., 3)
 
 # add metadata
 identical(as.character(meta_env$Code), rownames(site_scores)) # verify that data in same order

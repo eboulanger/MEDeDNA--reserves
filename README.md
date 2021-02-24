@@ -15,12 +15,12 @@ This repository hosts data and code to conduct analyses and produce figures in B
 This repository is structured as follow:
 
 - :file_folder: &nbsp;[**data/**](https://github.com/eboulanger/MEDeDNA--reserves/tree/master/data):
- contains all data required to reproduce figures
+ contains all data required to reproduce analyses and figures
 - :file_folder: &nbsp;[**scripts/**](https://github.com/eboulanger/MEDeDNA--reserves/tree/master/scripts):
- contains R scripts to reproduce analyses
+ contains R scripts to reproduce analyses and figures
 - :file_folder: &nbsp;[**figures/**](https://github.com/eboulanger/MEDeDNA--reserves/tree/master/figures):
  produced figures (.png) will be saved to this folder
 
 ## Usage
 
-Clone the repository and open the `MEDeDNA_reserves.Rproj` file
+Clone the repository and open `MEDeDNA_reserves.Rproj`
