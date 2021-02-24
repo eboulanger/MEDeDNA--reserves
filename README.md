@@ -6,21 +6,19 @@ This repository hosts data and code to conduct analyses and produce figures in B
 
 ## Goal
 
-1. :wrench: Load, clean and format data
-2. :computer: Run all analyses
-3. :bar_chart: Produce figures 2 through 5
+1. :wrench: Load and format data
+2. :computer: Run all paper analyses 
+3. :bar_chart: Produce paper figures 2 through 5
 
 ## Content
 
 This repository is structured as follow:
 
-- :file_folder: &nbsp;[**data/**](https://github.com/eboulanger/MEDeDNA--reserves):
+- :file_folder: &nbsp;[**data/**](https://github.com/eboulanger/MEDeDNA--reserves/tree/master/data):
  contains all data required to reproduce figures
-- :file_folder: &nbsp;[**scripts/**](https://github.com/eboulanger/MEDeDNA--reserves):
+- :file_folder: &nbsp;[**scripts/**](https://github.com/eboulanger/MEDeDNA--reserves/tree/master/scripts):
  contains R scripts to reproduce all the analyses and figures
-- :file_folder: &nbsp;[**silhouettes/**](https://github.com/eboulanger/MEDeDNA--reserves):
- contains fish silhouettes to add to plots
-- :file_folder: &nbsp;[**figures/**](https://github.com/eboulanger/MEDeDNA--reserves):
+- :file_folder: &nbsp;[**figures/**](https://github.com/eboulanger/MEDeDNA--reserves/tree/master/figures):
  produced figures (.png) will be saved to this folder
 
 ## Usage
