@@ -6,7 +6,7 @@ This repository hosts data and code to conduct analyses and produce figures in B
 
 ## Goal
 
-1. :wrench: Load, clean and format data, *conduct environmental PCA*
+1. :wrench: Load, clean and format data
 2. :computer: Run all analyses
 3. :bar_chart: Produce figures 2 through 5
 
