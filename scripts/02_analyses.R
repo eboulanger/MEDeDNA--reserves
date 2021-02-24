@@ -137,7 +137,7 @@ sp_scores <- scores(part.dbrda)$species %>% as.data.frame()
 # check if same order as species trait data
 identical(rownames(sp_scores), rownames(sp_traits))
 
-# test relationships & difference in means for different traits
+# test correlation & difference in means for different traits
 cor.test(sp_scores$CAP1, sp_traits$Trophic_level, method = "kendall")
 cor.test(sp_scores$CAP1, log(sp_traits$Common_length), method = "kendall")
 cor.test(sp_scores$CAP1, sp_traits$Vulnerability, method = "kendall")

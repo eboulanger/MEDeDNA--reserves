@@ -17,7 +17,7 @@ This repository is structured as follow:
 - :file_folder: &nbsp;[**data/**](https://github.com/eboulanger/MEDeDNA--reserves/tree/master/data):
  contains all data required to reproduce figures
 - :file_folder: &nbsp;[**scripts/**](https://github.com/eboulanger/MEDeDNA--reserves/tree/master/scripts):
- contains R scripts to reproduce all the analyses and figures
+ contains R scripts to reproduce analyses
 - :file_folder: &nbsp;[**figures/**](https://github.com/eboulanger/MEDeDNA--reserves/tree/master/figures):
  produced figures (.png) will be saved to this folder
 
