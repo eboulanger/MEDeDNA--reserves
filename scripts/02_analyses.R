@@ -97,7 +97,7 @@ replicate_beta_all %>% filter(Pairwise == "res_out5"   & Component == "Dissimila
 replicate_beta_all %>% filter(Pairwise == "res_out10"  & Component == "Dissimilarity") %>% pull(value) %>% summary.stats()
 replicate_beta_all %>% filter(Pairwise == "out5_out10" & Component == "Dissimilarity") %>% pull(value) %>% summary.stats()
 # - mean pairwise turnover for all comparisons
-replicate_beta_all %>% filter(Component == "turnover") %>% pull(value) %>% summary.stats() * 100
+replicate_beta_all %>% filter(Component == "Turnover") %>% pull(value) %>% summary.stats() * 100
 # - proportion of dissimilarity that is turnover
 prop.turn <- c(  res_out5_all$Turnover /   res_out5_all$Dissimilarity * 100,
                 res_out10_all$Turnover /  res_out10_all$Dissimilarity * 100,
@@ -118,6 +118,7 @@ anova(tot.dbrda, by = "margin", permutations = 9999)
 
 # on turnover between samples
 turn.dbrda      <- capscale(turnover   ~ Protection + envPC1 + envPC2 + envPC3 + envPC4, data = meta_env)
+RsquareAdj(turn.dbrda)
 anova(turn.dbrda, permutations = 9999)
 anova(turn.dbrda, by = "margin", permutations = 9999)
 # on nestedness between samples

@@ -185,17 +185,17 @@ sp_scores_traits <- cbind(sp_scores, sp_traits) %>%
   mutate(Vertical_Distribution_adj = fct_relevel(Vertical_Distribution_adj, c("Cryptobenthic", "Benthic", "Demersal", "Pelagic")))
 # prepare annotations
 an_trophic    <- paste0("Kendall tau = ", round(cor.test(sp_scores$CAP1, sp_traits$Trophic_level,      method = "kendall")$estimate, 2),
-                        "\nP = ",            round(cor.test(sp_scores$CAP1, sp_traits$Trophic_level,      method = "kendall")$p.value,  4))
+                        "\nP = ",         round(cor.test(sp_scores$CAP1, sp_traits$Trophic_level,      method = "kendall")$p.value,  3))
 an_length     <- paste0("Kendall tau = ", round(cor.test(sp_scores$CAP1, log(sp_traits$Common_length), method = "kendall")$estimate, 2),
-                        "\nP = ",            round(cor.test(sp_scores$CAP1, log(sp_traits$Common_length), method = "kendall")$p.value,  4))
+                        "\nP = ",         round(cor.test(sp_scores$CAP1, log(sp_traits$Common_length), method = "kendall")$p.value,  3))
 an_vulnerable <- paste0("Kendall tau = ", round(cor.test(sp_scores$CAP1, sp_traits$Vulnerability,      method = "kendall")$estimate, 2),
-                        "\nP = ",            round(cor.test(sp_scores$CAP1, sp_traits$Vulnerability,      method = "kendall")$p.value,  4))
+                        "\nP = ",         round(cor.test(sp_scores$CAP1, sp_traits$Vulnerability,      method = "kendall")$p.value,  3))
 an_vertical   <- paste0("ANOVA P = ",     round(summary(aov(sp_scores$CAP1 ~ sp_traits$Vertical_Distribution_adj))[[1]]$`Pr(>F)`[1], 4))
 
-grob_trophic    <- grobTree(textGrob(an_trophic   , x=0.03,  y=0.07, hjust=0, gp=gpar(fontsize=10)))
-grob_length     <- grobTree(textGrob(an_length    , x=0.03,  y=0.07, hjust=0, gp=gpar(fontsize=10)))
-grob_vulnerable <- grobTree(textGrob(an_vulnerable, x=0.03,  y=0.07, hjust=0, gp=gpar(fontsize=10)))
-grob_vertical   <- grobTree(textGrob(an_vertical  , x=0.03,  y=0.07, hjust=0, gp=gpar(fontsize=10)))
+grob_trophic    <- grobTree(textGrob(an_trophic   , x=0.03,  y=0.07, hjust=0, gp=gpar(fontsize=12)))
+grob_length     <- grobTree(textGrob(an_length    , x=0.03,  y=0.07, hjust=0, gp=gpar(fontsize=12)))
+grob_vulnerable <- grobTree(textGrob(an_vulnerable, x=0.03,  y=0.07, hjust=0, gp=gpar(fontsize=12)))
+grob_vertical   <- grobTree(textGrob(an_vertical  , x=0.03,  y=0.07, hjust=0, gp=gpar(fontsize=12)))
 
 # plots
 gtrophic <- ggplot(sp_scores_traits) + 
