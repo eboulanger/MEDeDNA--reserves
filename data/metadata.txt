@@ -1,0 +1,29 @@
+* MEDeDNA_species_ab.csv
+
+File containing the read abundance per species per sample.
+
+* MEDeDNA_sample_metadata.csv
+
+Code =                      Unique sampling code
+SPYGEN_code =               Unique lab code
+Date =                      Sampling date
+Country =                   Country
+Region =                    Region identifier, 
+Site =                      Site number (1 = reserve, 2 = 5 km outside, 3 = 10 km outside)
+Replicate =                 Replicate number
+Protection =                Management level 
+Time_start & Time_finish =  Start and end time of seawater filtration in the field
+duration =                  Duration of water filtration in the field
+center_lon & center_lat =   Coordinates of the transect center
+least_dist_reserve =        Smallest distance between the reserve boundary and sampling transect
+temp =                      Temperature measured during field work
+filter =                    Pore size of the filtration membrane, in µm
+envPC1 - envPC4 =           Coordinates on the first four axes of the PCA on environmental variables, as presented in the paper (figure S3)
+
+* MEDeDNA_species_traits.csv
+
+Species =               Scientific name
+Common_length =         Common length extracted from the FishMed database (https://doi.org/10.6084/m9.figshare.c.3307920.v1)
+Trophic_level =         Trophic level extracted from the FishMed database.
+Vertical_Distribution = Vertical distribution obtained from the FishMed database and completed with cryptobenthic families in Brandl et al. (2018) Biological Reviews (https://doi.org/10.1111/brv.12423)
+Vulnerability =         Vulnerability values extracted from FishBase (www.fishbase.se)
