@@ -15,7 +15,6 @@ Protection =                Management level
 Time_start & Time_finish =  Start and end time of seawater filtration in the field
 duration =                  Duration of water filtration in the field
 center_lon & center_lat =   Coordinates of the transect center
-least_dist_reserve =        Smallest distance between the reserve boundary and sampling transect
 temp =                      Temperature measured during field work
 filter =                    Pore size of the filtration membrane, in µm
 envPC1 - envPC4 =           Coordinates on the first four axes of the PCA on environmental variables, as presented in the paper (figure S3)
