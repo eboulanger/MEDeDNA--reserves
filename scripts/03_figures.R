@@ -84,6 +84,7 @@ fig2
 
 # export figure
 ggsave(plot = fig2, filename  = here::here("figures", "figure2.png"), width = 10,  height = 10, dpi = 600)
+#ggsave(plot = fig2, filename  = here::here("figures","pdf", "figure2.pdf"), width = 10,  height = 10)
 
 #### figure 3. partial dbRDA ####
 
@@ -177,6 +178,7 @@ fig3
 
 # export figure
 ggsave(plot = fig3, filename = here::here("figures", "figure3.png"), width = 15,  height = 8, dpi = 600)
+#ggsave(plot = fig3, filename = here::here("figures","pdf", "figure3.pdf"), width = 16,  height = 8)
 
 #### figure 4: species scores x traits ####
 
@@ -239,6 +241,7 @@ fig4
 
 # export figure
 ggsave(plot = fig4, filename = here::here("figures", "figure4.png"), width = 10,  height = 8, dpi = 600)
+#ggsave(plot = fig4, filename = here::here("figures","pdf", "figure4.pdf"), width = 10,  height = 8)
 
 #### figure 5: category GLMs ####
 # get conditional predicted richness from model
@@ -257,17 +260,16 @@ ggcplot <- function(df, category) {
     geom_errorbar(aes(x=xvals, ymin=lower, ymax=upper, col=xvals), width = 0.5, size = 1) +
     scale_color_manual(values=c(colres, colout5,colout10)) +
     scale_x_discrete(labels = c("reserve", "5km outside", "10km outside")) +
-    geom_text(aes(x=xvals, y=upper + 1), label = c("", "","**"), size = 6) +
-    labs(x = "", y = "") +
+    labs(x = "", y = "Predicted species richness") +
     theme(plot.title = element_text(hjust = 0.5)) +
     guides(color="none")
 }
 
 # plot for all categories
-cplot_crypto     <- ggcplot(cond_res, "crypto")     + labs(title = "Cryptobenthic", y="Predicted species richness")
-cplot_pelagic    <- ggcplot(cond_res, "pelagic")    + labs(title = "Pelagic")
-cplot_rare       <- ggcplot(cond_res, "rare")       + labs(title = "Rare")
-cplot_vulnerable <- ggcplot(cond_res, "vulnerable") + labs(title = "Vulnerable")
+cplot_crypto     <- ggcplot(cond_res, "crypto")     + labs(title = "Cryptobenthic") + geom_text(aes(x=xvals, y=upper + 1), label = c("", "*","**"), size = 6)
+cplot_pelagic    <- ggcplot(cond_res, "pelagic")    + labs(title = "Pelagic", y="")
+cplot_rare       <- ggcplot(cond_res, "rare")       + labs(title = "Rare", y="")    + geom_text(aes(x=xvals, y=upper + 1), label = c("", "**","*"), size = 6)
+cplot_vulnerable <- ggcplot(cond_res, "vulnerable") + labs(title = "Vulnerable", y="")
 
 fig5 <- (cplot_crypto| cplot_pelagic | cplot_rare | cplot_vulnerable) +
   plot_annotation(tag_levels = "a") & theme(plot.tag = element_text(face="bold", size = 15))
