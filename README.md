@@ -1,5 +1,5 @@
 # MEDeDNA reserves
-This repository hosts data and code to conduct analyses and produce figures in Boulanger et al. (under review) 
+This repository hosts data and code to conduct analyses and produce figures in Boulanger et al. (2021) 
 **Environmental DNA metabarcoding reveals and unpacks a biodiversity conservation paradox in Mediterranean marine reserves.**
 
 <hr />
